@@ -3,6 +3,8 @@ import Module from "../../layouts/Module";
 import Header from "../../components/Header";
 import { initialValues, quizQuestions, calculateScore } from "./config";
 import useForm from "../../hooks/useForm";
+import "./QuizOne.scss";
+import Button from "../../components/Button";
 
 
 function QuizOne(){
@@ -10,9 +12,8 @@ function QuizOne(){
 
     const handleSubmit = (data) => {
         console.log("data in top level at quiz 1: ", data);
-        alert("submit!");
         const calculatedScore = calculateScore(data);
-        setFinalScore(calculatedScore);
+        setFinalScore(calculatedScore.toString());
 
     };
 
@@ -32,14 +33,25 @@ function QuizOne(){
     }, [formData]);
 
     return (
-        <div>
+        <div className="QuizOne">
+            <iframe
+                className="IntroductionVideo"
+                src="https://www.youtube.com/embed/FzELkUpJYNY"
+                allowFullScreen
+            />
             <Module
                 questions={quizQuestions}
-                handleSubmit={simpleSubmit}
                 handleChange={wrappedHandleChange}
                 formData={formData}
             />
-            <Header as="h4">Score: {finalScore}/{Object.keys(formData).length}</Header>
+            <div className="QuizOneFooter">
+                <Button
+                    onClick={simpleSubmit}
+                >
+                    SUBMIT!
+                </Button>
+                <Header className="QuizOneScore" as="h4">Score: {finalScore}/{Object.keys(formData).length}</Header>
+            </div>
         </div>
     );
 }

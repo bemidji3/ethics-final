@@ -7,7 +7,8 @@ import "./Home.scss";
 
 function Home() {
     const panes = [
-        {menuItem: "Egoism", render: () => <TabPane><QuizOne/></TabPane>}
+        {menuItem: "Introduction", render: () => <TabPane><QuizOne/></TabPane>},
+        {menuItem: "Coming soon...", render: () => <TabPane><div style={{height: "60vh", color: "red"}}>Coming soon..</div></TabPane>}
     ];
 
     return (

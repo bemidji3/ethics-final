@@ -1,11 +1,10 @@
 import React from "react";
 import Form from "../../components/Form";
 import FormQuestion from "../../components/FormQuestion";
-import Button from "../../components/Button";
 import "./Module.scss";
 
 
-function Module({questions, handleSubmit, handleChange}){
+function Module({questions, handleChange}){
     return (
         <Form
             extraClassnames="ModuleForm"
@@ -19,11 +18,6 @@ function Module({questions, handleSubmit, handleChange}){
                     />
                 )
             })}
-            <Button
-                onClick={handleSubmit}
-            >
-                SUBMIT!
-            </Button>
         </Form>
     )
 }
