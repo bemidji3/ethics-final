@@ -1,32 +1,36 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState } from "react";
 import FormField from "../FormField";
 import RadioButton from "../RadioButton";
+import "./RadioButtonGroup.scss";
 import { capitalize } from "lodash";
 
-function RadioButtonGroup({values, defaultValue, name, }) {
+function RadioButtonGroup({values, onChange, index }) {
     const [groupValue, setGroupValue] = useState(null);
-    const handleChange = (e, { value }) => setGroupValue(value);
+    const handleChange = (index, value) => {
+        if(onChange){
+            onChange(index, value)
+        };
+        setGroupValue(value);
+    };
 
-    useEffect(() => {
-        setGroupValue(defaultValue);
-    }, [defaultValue]);
+    console.log("values in RadioButtonGroup ", values);
 
     return (
-        <Fragment>
+        <div className="RadioButtonGroup">
             {values &&
             values.map(val => (
                 <FormField>
                     <RadioButton
                         radio
-                        label={capitalize(val)}
-                        name={name}
-                        value={val}
-                        checked={groupValue === val}
+                        label={capitalize(val.label)}
+                        value={val.value}
+                        checked={groupValue === val.value}
                         onChange={handleChange}
+                        index={index}
                     />
                 </FormField>
             ))}
-        </Fragment>
+        </div>
     );
 }
 
