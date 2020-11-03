@@ -13,7 +13,6 @@ export const quizQuestions = [
 export const initialValues = {
     formData: {
         question0: "",
-        question1: "",
     }
 };
 

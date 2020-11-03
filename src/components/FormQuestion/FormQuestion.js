@@ -6,7 +6,7 @@ function FormQuestion({ question, handleChange, index}){
 
     return (
         <div className="FormQuestion">
-            <Header as="h5">{question.text}</Header>
+            <Header as="h5">Question #{index + 1 + " "}{question.text}</Header>
             <RadioButtonGroup
                 index={index}
                 values={question.potentialAnswers}

@@ -6,7 +6,7 @@ import useForm from "../../hooks/useForm";
 
 
 function QuizOne(){
-    const [finalScore, setFinalScore] = useState(0);
+    const [finalScore, setFinalScore] = useState("-");
 
     const handleSubmit = (data) => {
         console.log("data in top level at quiz 1: ", data);
@@ -39,7 +39,7 @@ function QuizOne(){
                 handleChange={wrappedHandleChange}
                 formData={formData}
             />
-            <Header as="h4">Score: {finalScore}</Header>
+            <Header as="h4">Score: {finalScore}/{Object.keys(formData).length}</Header>
         </div>
     );
 }
