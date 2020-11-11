@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { Radio as SemanticRadio } from "semantic-ui-react";
+import "semantic-ui-css/components/checkbox.css";
 import "./RadioButton.scss";
 
 export default function Radio({

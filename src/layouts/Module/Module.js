@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "../../components/Form";
-import FormQuestion from "../../components/FormQuestion";
+import MoralMachineQuestion from "../../components/MoralMachineQuestion";
 import "./Module.scss";
 
 
@@ -11,10 +11,12 @@ function Module({questions, handleChange}){
         >
             {questions.map((question, index) => {
                 return (
-                    <FormQuestion
-                        index={index}
-                        question={question}
+                    <MoralMachineQuestion
+                        imageOne={question.imageOne}
+                        imageTwo={question.imageTwo}
                         handleChange={handleChange}
+                        questionAnswers={question.potentialAnswers}
+                        index={index}
                     />
                 )
             })}

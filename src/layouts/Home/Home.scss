@@ -1,15 +1,14 @@
 .MainHomeContent {
-  min-width: 100vh;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: azure;
 
   .ModuleContent {
     background-color: deepskyblue;
-    height: 75vh;
-    width: 75vh;
+    height: 800px;
+    width: 1000px;
   }
 }

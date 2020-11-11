@@ -1,5 +1,5 @@
 import React from "react";
-import QuizOne from "../../views/QuizOne/QuizOne";
+import MoralMachine from "../../views/MoralMachine/MoralMachine";
 import Header from "../../components/Header";
 import Tab from "../../components/Tab";
 import TabPane from "../../components/TabPane";
@@ -7,7 +7,7 @@ import "./Home.scss";
 
 function Home() {
     const panes = [
-        {menuItem: "Introduction", render: () => <TabPane><QuizOne/></TabPane>},
+        {menuItem: "Introduction", render: () => <TabPane><MoralMachine/></TabPane>},
         {menuItem: "Coming soon...", render: () => <TabPane><div style={{height: "60vh", color: "red"}}>Coming soon..</div></TabPane>}
     ];
 
