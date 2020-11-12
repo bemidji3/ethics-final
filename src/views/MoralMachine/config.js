@@ -19,6 +19,8 @@ import imageNineTwo from "../../images/case-9-2.jpg";
 import imageTenOne from "../../images/case-10-1.jpg";
 import imageTenTwo from "../../images/case-10-2.jpg";
 
+import {forOwn} from "lodash";
+
 export const moralMachineQuestions = [
     {
         imageOne: {
@@ -41,7 +43,7 @@ export const moralMachineQuestions = [
                     speciesPreference: 0,
                     socialValuePreference: 0,
                     agePreference: 0,
-                }
+                },
             },
             {
                 label: "Scenario 2",
@@ -415,4 +417,25 @@ export const initialValues = {
         question8: "",
         question9: "",
     }
+};
+
+export const calculateFinalScore = (data) => {
+    let results = {
+        saveMoreLives: 0,
+        protectPassengers: 0,
+        upHoldTheLaw: 0,
+        avoidIntervention: 0,
+        genderPreference: 0,
+        speciesPreference: 0,
+        socialValuePreference: 0,
+        agePreference: 0,
+    };
+
+    forOwn(data, (value) => {
+        forOwn(value, (value, key) => {
+            results[key] += value;
+        })
+    });
+
+    return results;
 };

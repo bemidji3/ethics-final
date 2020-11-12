@@ -4,16 +4,14 @@ import RadioButton from "../RadioButton";
 import "./RadioButtonGroup.scss";
 import { capitalize } from "lodash";
 
-function RadioButtonGroup({values, onChange, index }) {
+function RadioButtonGroup({values, onChange, index}) {
     const [groupValue, setGroupValue] = useState(null);
     const handleChange = (index, value) => {
         if(onChange){
             onChange(index, value)
-        };
+        }
         setGroupValue(value);
     };
-
-    console.log("values in RadioButtonGroup ", values);
 
     return (
         <div className="RadioButtonGroup">

@@ -12,7 +12,9 @@
   }
 
   .MoralMachineFooter {
-    .SubmitButton {
+    display: flex;
+    flex-direction: row;
+    .SubmitButton, .ResetButton {
       margin-top: 15px;
     }
   }

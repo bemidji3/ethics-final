@@ -13,7 +13,7 @@ function Home() {
 
     return (
         <div className="MainHomeContent">
-            <Header as="h1">Welcome to our Quiz App (pre-alpha)</Header>
+            <Header as="h1">Welcome to our Moral Machine Quiz</Header>
             <div className="ModuleContent">
                 <Tab panes={panes} />
             </div>
