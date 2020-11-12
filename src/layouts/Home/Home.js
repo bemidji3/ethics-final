@@ -4,12 +4,14 @@ import Header from "../../components/Header";
 import Tab from "../../components/Tab";
 import TabPane from "../../components/TabPane";
 import VideoView from "../../views/VideoView";
+import QuizView from "../../views/QuizView";
 import "./Home.scss";
 
 function Home() {
     const panes = [
-        {menuItem: "Introduction", render: () => <TabPane><MoralMachine /></TabPane>},
-        {menuItem: "Coming soon...", render: () => <TabPane><VideoView /></TabPane>}
+        {menuItem: "Moral Machine", render: () => <TabPane><MoralMachine /></TabPane>},
+        {menuItem: "Learn", render: () => <TabPane><VideoView /></TabPane>},
+        {menuItem: "Quiz", render: () => <TabPane><QuizView/></TabPane>}
     ];
 
     return (
