@@ -1,0 +1,23 @@
+.MoralMachineQuestion {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+
+  .MoralMachineImages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .ImageOne {
+      display: flex;
+      align-self: flex-start;
+    }
+
+    .ImageTwo {
+      display: flex;
+      align-self: flex-end;
+    }
+  }
+
+
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import { Header as SemanticHeader } from "semantic-ui-react";
 import classNames from "classnames";
-import "semantic-ui-css/components/button.css";
+import "semantic-ui-css/components/header.css";
 
-function Button({ className, children, ...restProps }) {
+function Header({ className, children, ...restProps }) {
     const extraClassName = classNames("Header ", {
         [className]: !!className,
     });
@@ -14,4 +14,4 @@ function Button({ className, children, ...restProps }) {
     );
 }
 
-export default Button;
+export default Header;

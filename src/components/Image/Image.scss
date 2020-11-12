@@ -1,0 +1,14 @@
+.ImageWithHeader {
+
+  .Image {
+
+  }
+
+  .ImageLabel {
+    &.SecondImage {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+}
